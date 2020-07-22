@@ -6,7 +6,6 @@ Returns: an integer
 def eating_cookies(n):
     # Your code here
     cache = {}
-
     if n in cache:
         return cache[n]
     elif n <= 1:
@@ -17,7 +16,6 @@ def eating_cookies(n):
         result = 4
     else:
         result = eating_cookies(n-3)+eating_cookies(n-2)+eating_cookies(n-1)
-    
     cache[n] = result
     return result
 
